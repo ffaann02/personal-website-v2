@@ -2,7 +2,7 @@ import React, { useState ,useEffect} from 'react';
 import { AppBar, Button, Drawer, styled, Toolbar, Typography,Box, Grid} from "@mui/material";
 import { makeStyles } from '@mui/styles'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import heroblockImage from "..//images/faan-image.png"
+import emoji03 from "..//images/emoji03.png"
 import ArticleIcon from '@mui/icons-material/Article';
 import PhoneIcon from '@mui/icons-material/Phone';
 import emoji01 from "..//images/emoji01.png"
@@ -14,7 +14,7 @@ const useStyles = makeStyles({
         alignSelft: "center",
     },
     heroblockImage:{
-        width:"55vh",
+        width:"45vh",
         height:"100%",
         marginTop:"40px",
         marginLeft:"auto",
@@ -41,14 +41,14 @@ export default function HeroBlock(){
             <Grid item lg={12} md={12} sm={12} xs={12} sx={{textAlign:"center",position:"relative"}}>
             <Box sx={{ display: "flex", marginLeft: "auto", marginRight: "auto"
             ,alignSelf: "center", width: { lg: "100%", md: "400px", sm: "400px", xs: "300px" },position:"absolute"}}>
-                <img src={heroblockImage} className={classes.heroblockImage}/>
+                <img src={emoji03} className={classes.heroblockImage}/>
             </Box>
             <Grid container sx={{width:"100%",height:"100%",marginTop:"20px",position:"absolute"}}>
                 <Grid item lg={6} md={6} sm={12} xs={12} sx={{textAlign:"left",height:"100%"}}>
                     <Box sx={{marginTop:"25%"}}>
                     <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"2vw"}}>Hi 👋, I'm</Typography>
-                    <Typography sx={{ fontWeight: "600" ,color:"#205375",fontSize:"4vw"}}>RUDFAAN</Typography>
-                    <Typography sx={{ fontWeight: "600" ,color:"#205375",fontSize:"4vw"}}>MAIMAHAD</Typography>
+                    <Typography sx={{ fontWeight: "600" ,color:"#205375",fontSize:"3.8vw"}}>RUDFAAN</Typography>
+                    <Typography sx={{ fontWeight: "600" ,color:"#205375",fontSize:"3.8vw"}}>MAIMAHAD</Typography>
                     <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"1vw"}}>Computer Engineering Student</Typography>
                     <Typography  sx={{ fontWeight: "600" ,color:"#205375",display:"flex"}}> 
                     <Typography  sx={{fontWeight: "600" ,color:"#205375",fontSize:"1vw"}}>at </Typography>
@@ -59,7 +59,8 @@ export default function HeroBlock(){
                 <Grid item lg={6} md={6} sm={12} xs={12} sx={{textAlign:"right",height:"100%"}}>
                     <Box sx={{marginTop:"40%"}}>
                     <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"2vw"}}>Interested in </Typography>
-                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"1.5vw"}}>Website & Mobile Application Development</Typography>
+                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"1.5vw"}}>Software Development</Typography>
+                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"1.5vw"}}>Sports & Speaking</Typography>
                     <Box sx={{width:"100%"}}>
                     <HeroblockButton sx={{marginTop:"10px"}}>
                         <GitHubIcon sx={{marginRight:"5px", color :"#277BC0"}}/>
