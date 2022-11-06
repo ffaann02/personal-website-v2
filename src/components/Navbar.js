@@ -1,6 +1,7 @@
 import React, { useState ,useEffect} from 'react';
 import { AppBar, Button, Drawer, styled, Toolbar, Typography,Box} from "@mui/material";
 import { makeStyles } from '@mui/styles'
+import {Link} from "react-scroll"
 
 const useStyles = makeStyles({
     box:{
@@ -40,20 +41,30 @@ export default function Navbar(){
             <AppBar position="fixed" elevation={0} sx={{backgroundColor:"white", boxShadow:"0 2px 10px rgb(0 0 0 / 0.125)",width:"100%"}}>
             <StyledToolbar sx={{width:{lg:"60%",md:"90%",sm:"90%",xs:"90%"}}}>
                 <Box sx={{display:"flex"}}>
+                <Link to="home" smooth duration={1000} offset={-90}>
                 <Typography variant="h6" sx={{display:{xs:"none",sm:"block"},color:"#30475E",fontWeight:"700",cursor:"pointer",fontSize:"28px"}}>
                     FFAANN
                 </Typography>
+                </Link>
                 </Box>
                 <Buttons sx={{display:{xs:"none",sm:"block"}}}>
+                    <Link to="skills" smooth duration={1000} offset={50}>
                         <NavbarButton variant="text">
-                            <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>SKILLS</Typography>
+                            <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Skills</Typography>
                         </NavbarButton>
-                        <NavbarButton variant="text">
+                    </Link>
+                    <Link to="projects" smooth duration={1000} offset={-100}>
+                    <NavbarButton variant="text">
                             <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Projects</Typography>
                         </NavbarButton>
-                        <NavbarButton variant="text">
-                        <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>CONTACT</Typography>
+                    </Link>
+                    <Link to="contact" smooth duration={1000} offset={-90}>
+                    <NavbarButton variant="text">
+                        <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Contact</Typography>
                         </NavbarButton>
+                    </Link>
+                        
+                        
                 </Buttons>
             </StyledToolbar>
             </AppBar>

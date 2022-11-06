@@ -10,13 +10,16 @@ import unityIcon from "..//images/Logo/unity.png"
 import mysqlIcon from "..//images/Logo/mysql.png"
 import reactnativeIcon from "..//images/Logo/react-native.png"
 import arduinoIcon from "..//images/Logo/arduino.png"
-
 /// import tools icon
 import gitIcon from "..//images/Logo/git.png"
 import githubIcon from "..//images/Logo/github.png"
 import azureIcon from "..//images/Logo/azure.png"
 import postmanIcon from "..//images/Logo/postman.png"
 import muiIcon from "..//images/Logo/mui.png"
+
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 const useStyles = makeStyles({
     container: {
@@ -40,9 +43,11 @@ const useStyles = makeStyles({
 
 export default function Skill() {
     const classes = useStyles();
-    
+    useEffect(()=>{
+        Aos.init({ duration:1500});
+    },[]);
     return (
-        <Box sx={{ marginTop: "20px", display: "flex", flexDirection: "column", position: "relative",height:"85vh"}}>
+        <Box sx={{ marginTop: "20px", display: "flex", flexDirection: "column", position: "relative",height:"85vh"}} id="skills">
             <Box sx={{ position: "absolute", width: "100%"}}>
                 <Box sx={{ width: "100%", backgroundColor: "#F8F8F8",  height: "50vh"}}>
                     <Grid container className={classes.container} sx={{
@@ -62,7 +67,7 @@ export default function Skill() {
                 </Box>
                 <Grid container className={classes.container} sx={{
                     width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" }, textAlign: "center", top:"70%",position:"absolute",left:"0",right:"0"
-                }}>
+                }} data-aos="fade-up">
                     <Grid item lg={12} md={12} sm={12} xs={12} sx={{ textAlign: "center",backgroundColor:"white"
                     ,borderRadius:"20px",boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}>
                         <Grid container sx={{width:"100%",height:"50vh"}}>

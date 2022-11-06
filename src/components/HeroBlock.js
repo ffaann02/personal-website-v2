@@ -7,6 +7,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import PhoneIcon from '@mui/icons-material/Phone';
 import emoji01 from "..//images/emoji01.png"
 import "./heroblockStyle.css"
+import {Link} from "react-scroll"
 const useStyles = makeStyles({
     container: {
         display: 'flex',
@@ -50,7 +51,7 @@ export default function HeroBlock(){
         })
     }
     return(
-        <Box sx={{width:"100%",position:"relative"}}>
+        <Box sx={{width:"100%",position:"relative"}} id="home">
 <Grid container className={classes.container} sx={{
             width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" },height:"60vh"
             ,marginTop: { lg: "40px", md: "40px", sm: "10px", xs: "10px"}}}>

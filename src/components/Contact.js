@@ -9,6 +9,8 @@ import emoji04 from "..//images/emoji04.png"
 import profileImage from "..//images/faan-image.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin, faMediumM} from '@fortawesome/free-brands-svg-icons'
+import Aos from "aos";
+import "aos/dist/aos.css"
 const useStyles = makeStyles({
     container: {
         display: 'flex',
@@ -45,7 +47,8 @@ const useStyles = makeStyles({
         width: "175px",
         borderRadius:"20px",
         marginTop:"10px",
-        
+        position:"absolute",
+        bottom:"30px"
     },
     
 })
@@ -67,8 +70,11 @@ const GridImage = styled(Grid)(({ theme }) => ({
 
 export default function Contact() {
     const classes = useStyles();
+    useEffect(()=>{
+        Aos.init({ duration:1500});
+    },[]);
     return (
-        <Box className={classes.container} sx={{ width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" }, marginTop: "20px" }}>
+        <Box className={classes.container} sx={{ width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" }, marginTop: "20px" }} id="contact" data-aos="fade-up">
             <Box sx={{ width: "100%" }}>
                 <Typography sx={{ fontSize: "2.5vw", marginTop: "40px", fontWeight: "600", color: "#205375", textAlign: "center" }}>Get In Touch</Typography>
                 <hr className={classes.underLine} />
@@ -104,7 +110,6 @@ export default function Contact() {
                         </Typography>
                             <Box>
                             <img src={profileImage} className={classes.profileThumbnail} />
-                            <Typography sx={{textAlign:"left",marginLeft:"15px",marginTop:"5px"}}>Rudfaan Maimahad</Typography>
                             </Box>
                     </Grid>
                     <GridImage item lg={5}>

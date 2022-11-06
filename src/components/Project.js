@@ -8,6 +8,9 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import award01 from "..//images/Experience/fibo.jpeg"
 import award02 from "..//images/Experience/jstp.png"
 import award03 from "..//images/Experience/nsc.png"
+
+import Aos from "aos";
+import "aos/dist/aos.css"
 const useStyles = makeStyles({
     container: {
         display: 'flex',
@@ -50,9 +53,12 @@ const GridImage = styled(Grid)(({ theme }) => ({
 }));
 
 export default function Project() {
+    useEffect(()=>{
+        Aos.init({ duration:1500});
+    },[]);
     const classes = useStyles();
     return (
-        <Box className={classes.container} sx={{ width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" }, marginTop: "20px" }}>
+        <Box className={classes.container} sx={{ width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" }, marginTop: "20px" }} id="projects" data-aos="fade-up">
             <Box sx={{ width: "100%" }}>
                 <Typography sx={{ fontSize: "2.5vw", marginTop: "40px", fontWeight: "600", color: "#205375", textAlign: "center" }}>Projects & Experience</Typography>
                 <hr className={classes.underLine} />
