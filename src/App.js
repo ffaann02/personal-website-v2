@@ -6,6 +6,7 @@ import Skill from './components/Skill';
 import "./index.css"
 import Project from './components/Project';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 function App() {
   return (
     <Box>
@@ -14,6 +15,7 @@ function App() {
       <Skill/>
       <Project/>
       <Contact/>
+      <Footer/>
     </Box>
   );
 }
