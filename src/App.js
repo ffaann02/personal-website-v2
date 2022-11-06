@@ -5,6 +5,7 @@ import { Box } from '@mui/system';
 import Skill from './components/Skill';
 import "./index.css"
 import Project from './components/Project';
+import Contact from './components/Contact';
 function App() {
   return (
     <Box>
@@ -12,6 +13,7 @@ function App() {
       <HeroBlock/>
       <Skill/>
       <Project/>
+      <Contact/>
     </Box>
   );
 }
