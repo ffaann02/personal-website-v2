@@ -49,7 +49,7 @@ export default function Navbar(){
                             <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>SKILLS</Typography>
                         </NavbarButton>
                         <NavbarButton variant="text">
-                            <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>PROJECTS</Typography>
+                            <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Projects</Typography>
                         </NavbarButton>
                         <NavbarButton variant="text">
                         <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>CONTACT</Typography>

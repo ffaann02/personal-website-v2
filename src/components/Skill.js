@@ -105,7 +105,7 @@ export default function Skill() {
                                     <Typography variant="h6" sx={{fontSize:"1.5vw",fontWeight:"600",color:"#205375"}}>Leadership</Typography>
                                     <Typography variant="h6" sx={{fontSize:"1.5vw",fontWeight:"600",marginTop:"10px",color:"#205375"}}>Speaking</Typography>
                                     <Typography variant="h6" sx={{fontSize:"1.5vw",fontWeight:"600",marginTop:"10px",color:"#205375"}}>Game Design</Typography>
-
+                                    <Typography variant="h6" sx={{fontSize:"1.5vw",fontWeight:"600",marginTop:"10px",color:"#205375"}}>Typing</Typography>
                                 </Box>
                             </Grid>
                         </Grid>
