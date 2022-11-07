@@ -37,16 +37,21 @@ const useStyles = makeStyles({
     }
 })
 
-const KeywordButton = styled(Button)(({ theme }) => ({
-    color: "white",
-    fontWeight: "600",
-    backgroundColor: "#5DA7DB",
-    borderRadius: "8px",
-    border: "1px solid #25316D",
-    "&:hover": {
-        backgroundColor: "#5DA7DB",
+const ReadmoreButton = styled(Button)(({theme})=>({
+    fontSize:"20px",
+    fontWeight:"600",
+    marginLeft:"30px",
+    color:"#023E8A",
+    borderRadius:"8px",
+    backgroundColor:"#EEF1FF",
+    padding:"10px 20px",
+    transition:"0.5s",
+    "&:hover":{
+        padding:"10px 30px" ,
+        backgroundColor:"#B8E8FC"
     },
 }));
+
 
 const GridImage = styled(Grid)(({ theme }) => ({
     
@@ -130,6 +135,9 @@ export default function Project() {
                         </Typography>
                         <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
                         I developed Educational Game, Online Multiplayer Game and Website for Detecting Electrical Appliances in household.                        </Typography>
+                    </Grid>
+                    <Grid lg={12} sx={{marginTop:"20px",textAlign:"center"}}>
+                        <ReadmoreButton>Read more</ReadmoreButton>
                     </Grid>
                 </Grid>
             </Box>

@@ -51,12 +51,12 @@ export default function Skill() {
             <Box sx={{ position: "absolute", width: "100%"}}>
                 <Box sx={{ width: "100%", backgroundColor: "#F8F8F8",  height: "50vh"}}>
                     <Grid container className={classes.container} sx={{
-                        width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" }, textAlign: "center",
+                        width: { xl:"60%",lg: "70%", md: "90%", sm: "90%", xs: "90%" }, textAlign: "center",
                     }}>
                         <Grid item lg={12} md={12} sm={12} xs={12} sx={{ textAlign: "center" ,padding:"0 20px"}}>
-                            <Typography sx={{ fontSize: "2.5vw", marginTop: "40px", fontWeight: "600", color: "#205375"}}>About Me</Typography>
+                            <Typography sx={{ fontSize:{xl:"2.5vw",lg:"36x",md:"36px"}, marginTop: "40px", fontWeight: "600", color: "#205375"}}>About Me</Typography>
                             <hr className={classes.underLine}/>
-                            <Typography sx={{fontSize:"1vw",fontWeight:"600",color: "#205375",lineHeight:"1.75",marginTop:"20px"}}>
+                            <Typography sx={{fontSize:{xl:"1vw",lg:"1.25vw",md:"16px"},fontWeight:"600",color: "#205375",lineHeight:"1.75",marginTop:"20px"}}>
                             My name is Rudfaan Maimahad. I'm 19 years old, studying in Computer Engineering Bachelor at KMUTT. <br/>
                             I'm interested in Software Development, especially Website and Mobile Application.<br/> 
                             And I also really enjoy Game Development, Basic Machine Learning and Robotic.
@@ -64,9 +64,9 @@ export default function Skill() {
                             
                         </Grid>
                     </Grid>
-                </Box>
+                </Box> 
                 <Grid container className={classes.container} sx={{
-                    width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" }, textAlign: "center", top:"70%",position:"absolute",left:"0",right:"0"
+                    width: { xl:"60%",lg: "70%", md: "90%", sm: "90%", xs: "90%" }, textAlign: "center", top:"70%",position:"absolute",left:"0",right:"0"
                 }} data-aos="fade-up">
                     <Grid item lg={12} md={12} sm={12} xs={12} sx={{ textAlign: "center",backgroundColor:"white"
                     ,borderRadius:"20px",boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}>

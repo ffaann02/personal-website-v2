@@ -16,11 +16,18 @@ const useStyles = makeStyles({
         alignSelft: "center",
     },
     heroblockImage:{
-        width:"45vh",
+        width:"450px",
         height:"100%",
         marginTop:"40px",
         marginLeft:"auto",
-        marginRight:"auto"
+        marginRight:"auto",
+        ['@media (max-width:1536px)']:{
+            width:"400px",
+        },
+        ['@media (max-width:1200px)']:{
+            width:"450px"
+        }
+        
     },
     heroBlockIcon:{
         width:"7.5vw",
@@ -53,31 +60,31 @@ export default function HeroBlock(){
     return(
         <Box sx={{width:"100%",position:"relative"}} id="home">
 <Grid container className={classes.container} sx={{
-            width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" },height:"60vh"
-            ,marginTop: { lg: "40px", md: "40px", sm: "10px", xs: "10px"}}}>
+            width: { xl:"60%",lg: "70%", md: "90%", sm: "90%", xs: "90%" },height:{xl:"60vh",lg:"57vh",md:"60vh"}
+            ,marginTop: { lg: "50px", md: "40px", sm: "10px", xs: "10px"}}}>
             <Grid item lg={12} md={12} sm={12} xs={12} sx={{textAlign:"center",position:"relative"}}>
             <Box sx={{ display: "flex", marginLeft: "auto", marginRight: "auto"
-            ,alignSelf: "center", width: { lg: "100%", md: "400px", sm: "400px", xs: "300px" },position:"absolute"}}>
+            ,alignSelf: "center", width: { xl:"100%",lg: "100%", md: "100%", sm: "400px", xs: "300px" },position:"absolute"}}>
                 <img src={emoji03} className={classes.heroblockImage}/>
             </Box>
             <Grid container sx={{width:"100%",height:"100%",marginTop:"20px",position:"absolute",zIndex:"2"}}>
                 <Grid item lg={6} md={6} sm={12} xs={12} sx={{textAlign:"left",height:"100%"}}>
-                    <Box sx={{marginTop:"25%"}} id="layer" data-speed="-1">
-                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"2vw"}}>Hi 👋, I'm</Typography>
-                    <Typography sx={{ fontWeight: "600" ,color:"#205375",fontSize:"3.8vw"}}>RUDFAAN</Typography>
-                    <Typography sx={{ fontWeight: "600" ,color:"#205375",fontSize:"3.8vw"}}>MAIMAHAD</Typography>
-                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"1vw"}}>Computer Engineering Student</Typography>
+                    <Box sx={{marginTop:"100px"}} id="layer" data-speed="-1">
+                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"2vw",lg:"30px",md:"30px"}}}>Hi 👋, I'm</Typography>
+                    <Typography sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"3.7vw",lg:"50px",md:"50px",sm:"50px",xs:"50px"}}}>RUDFAAN</Typography>
+                    <Typography sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"3.7vw",lg:"50px",md:"50px",sm:"50px",xs:"50px"}}}>MAIMAHAD</Typography>
+                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"1vw",lg:"16px",md:"16px",sm:"16px",xs:"16px"}}}>Computer Engineering Student</Typography>
                     <Typography  sx={{ fontWeight: "600" ,color:"#205375",display:"flex"}}> 
-                    <Typography  sx={{fontWeight: "600" ,color:"#205375",fontSize:"1vw"}}>at </Typography>
-                    <Typography  sx={{fontWeight: "600", color:"#F66B0E",marginLeft:"10px",fontSize:"1.5vw"}}>KMUTT</Typography>
+                    <Typography  sx={{fontWeight: "600" ,color:"#205375",fontSize:{xl:"1vw",lg:"26px",md:"26px",sm:"26px",xs:"26px"}}}>at </Typography>
+                    <Typography  sx={{fontWeight: "600", color:"#F66B0E",marginLeft:"10px",fontSize:{xl:"1.5vw",lg:"30px",md:"30px",sm:"30px",xs:"30px"}}}>KMUTT</Typography>
                     </Typography>
                     </Box>
                 </Grid>
                 <Grid item lg={6} md={6} sm={12} xs={12} sx={{textAlign:"right",height:"100%"}}>
-                    <Box sx={{marginTop:"40%"}} id="layer" data-speed="1">
-                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"2vw"}}>Interested in </Typography>
-                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"1.5vw"}}>Software Development</Typography>
-                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:"1.5vw"}}>Sports & Speaking</Typography>
+                    <Box sx={{marginTop:"175px"}} id="layer" data-speed="1">
+                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"2vw",lg:"30px",md:"30px"}}}>Interested in </Typography>
+                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"1.5vw",lg:"24px",md:"24px"}}}>Software Development</Typography>
+                    <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"1.5vw",lg:"24px",md:"24px"}}}>Sports & Speaking</Typography>
                     <Box sx={{width:"100%"}}>
                     <HeroblockButton sx={{marginTop:"10px"}}>
                         <GitHubIcon sx={{marginRight:"5px", color :"#277BC0"}}/>
