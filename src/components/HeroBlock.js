@@ -26,6 +26,11 @@ const useStyles = makeStyles({
         },
         ['@media (max-width:1200px)']:{
             width:"450px"
+        },
+        ['@media (max-width:900px)']:{
+            width:"350px",
+            marginTop:"100px",
+            marginRight:"0",
         }
         
     },
@@ -33,6 +38,14 @@ const useStyles = makeStyles({
         width:"7.5vw",
         opacity:"50%"
     },
+    heroblockImage02:{
+        width:"350px",
+        height:"51%",
+        marginLeft:"auto",
+        marginRight:"auto",
+        display:"flex",
+        justifySelf:"center"
+    }
     
     
 })
@@ -60,16 +73,18 @@ export default function HeroBlock(){
     return(
         <Box sx={{width:"100%",position:"relative"}} id="home">
 <Grid container className={classes.container} sx={{
-            width: { xl:"60%",lg: "70%", md: "90%", sm: "90%", xs: "90%" },height:{xl:"60vh",lg:"57vh",md:"60vh"}
+            width: { xl:"60%",lg: "70%", md: "90%", sm: "90%", xs: "90%" },height:{xl:"60vh",lg:"57vh",md:"60vh",sm:"100%",xs:"100%"}
             ,marginTop: { lg: "50px", md: "40px", sm: "10px", xs: "10px"}}}>
             <Grid item lg={12} md={12} sm={12} xs={12} sx={{textAlign:"center",position:"relative"}}>
             <Box sx={{ display: "flex", marginLeft: "auto", marginRight: "auto"
-            ,alignSelf: "center", width: { xl:"100%",lg: "100%", md: "100%", sm: "400px", xs: "300px" },position:"absolute"}}>
+            ,alignSelf: "center", width: { xl:"100%",lg: "100%", md: "100%", sm: "100%", xs: "100%" },position:"absolute"
+            ,display:{xl:"flex",lg:"flex",md:"flex",sm:"flex",xs:"none"}}}>
                 <img src={emoji03} className={classes.heroblockImage}/>
             </Box>
-            <Grid container sx={{width:"100%",height:"100%",marginTop:"20px",position:"absolute",zIndex:"2"}}>
-                <Grid item lg={6} md={6} sm={12} xs={12} sx={{textAlign:"left",height:"100%"}}>
-                    <Box sx={{marginTop:"100px"}} id="layer" data-speed="-1">
+            <Grid container sx={{width:"100%",height:"100%",marginTop:"20px",position:{xl:"absolute",lg:"absolute",md:"absolute"
+            ,sm:"",xs:""},zIndex:"3",display:"flex"}}>
+                <Grid item lg={6} md={6} sm={12} xs={12} sx={{textAlign:"left"}}>
+                    <Box sx={{marginTop:{xl:"100px",lg:"100px",md:"100px",sm:"50px",xs:"50px"}}} id="layer" data-speed="-1">
                     <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"2vw",lg:"30px",md:"30px"}}}>Hi 👋, I'm</Typography>
                     <Typography sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"3.7vw",lg:"50px",md:"50px",sm:"50px",xs:"50px"}}}>RUDFAAN</Typography>
                     <Typography sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"3.7vw",lg:"50px",md:"50px",sm:"50px",xs:"50px"}}}>MAIMAHAD</Typography>
@@ -80,8 +95,8 @@ export default function HeroBlock(){
                     </Typography>
                     </Box>
                 </Grid>
-                <Grid item lg={6} md={6} sm={12} xs={12} sx={{textAlign:"right",height:"100%"}}>
-                    <Box sx={{marginTop:"175px"}} id="layer" data-speed="1">
+                <Grid item lg={6} md={6} sm={12} xs={12} sx={{textAlign:{xl:"right",lg:"right",md:"right",sm:"left",xs:"left"}}}>
+                    <Box sx={{marginTop:{xl:"175px",lg:"175px",md:"175px",sm:"20px",xs:"20px"}}} id="layer" data-speed="1">
                     <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"2vw",lg:"30px",md:"30px"}}}>Interested in </Typography>
                     <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"1.5vw",lg:"24px",md:"24px"}}}>Software Development</Typography>
                     <Typography  sx={{ fontWeight: "600" ,color:"#205375",fontSize:{xl:"1.5vw",lg:"24px",md:"24px"}}}>Sports & Speaking</Typography>
@@ -95,11 +110,15 @@ export default function HeroBlock(){
                             <Typography sx={{fontSize:"16px",marginTop:"2px",fontWeight:"600",color:"#023E8A"}}>RESUME</Typography>
                     </HeroblockButton>
                     </Box>
-                    <HeroblockButton sx={{marginLeft:"10px",marginTop:"10px"}}>
+                    <HeroblockButton sx={{marginLeft:"10px",marginTop:"10px",marginLeft:"0"}}>
                         <PhoneIcon sx={{marginRight:"5px", color :"#277BC0"}}/>
                             <Typography sx={{fontSize:"16px",marginTop:"2px",fontWeight:"600",color:"#023E8A"}}>CONTACT ME</Typography>
                     </HeroblockButton>
                     </Box>
+                </Grid>
+                <Grid item lg={6} md={6} sm={12} xs={12} sx={{textAlign:"center",width:"100%",height:"100%"
+                ,display:{xl:"none",lg:"none",md:"none",sm:"none",xs:"block"}}}>
+                    <img src={emoji03} className={classes.heroblockImage02}/>
                 </Grid>
             </Grid>
 
