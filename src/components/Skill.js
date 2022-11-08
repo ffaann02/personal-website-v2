@@ -143,7 +143,8 @@ export default function Skill() {
                             </Grid>
                             <Grid item lg={4} md={4} sm={12} xs={12} sx={{borderRadius:{xl:"0 20px 20px 0",lg:"0 20px 20px 0 "
                             ,md:"0 20px 20px 0 ",sm:"0 0 20px 20px",xs:"0 0 20px 20px"},borderRight:"1px solid #DDDDDD"
-                            ,borderTop:"1px solid #DDDDDD",borderBottom:"1px solid #DDDDDD",padding:"30px 10px 20px 10px"}}>
+                            ,borderTop:{xl:"1px solid #DDDDDD",lg:"1px solid #DDDDDD",md:"1px solid #DDDDDD",sm:"none",xs:"none"},borderBottom:"1px solid #DDDDDD",padding:"30px 10px 20px 10px"
+                            ,borderLeft:{xl:"none",lg:"none",md:"none",sm:"1px solid #DDDDDD",xs:"1px solid #DDDDDD"}}}>
                                 <Typography variant="h6" sx={{fontSize:{xl:"1.5vw",lg:"1.5vw",md:"24px",sm:"30px",xs:"24px"},fontWeight:"600"}}>Other Skills</Typography>
                                 <Box sx={{padding:"20px 40px",marginTop:"10px"}}>
                                     <Typography variant="h6" sx={{fontSize:{xl:"1.3vw",lg:"1.5vw",md:"22px",sm:"26px",xs:"22px"},fontWeight:"600",color:"#205375"}}>Leadership</Typography>

@@ -4,12 +4,27 @@ import { makeStyles } from '@mui/styles'
 import {Link} from "react-scroll"
 import MenuIcon from '@mui/icons-material/Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemButton from '@mui/material/ListItemButton';
+import HomeIcon from '@mui/icons-material/Home';
+import ArticleIcon from '@mui/icons-material/Article';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import CallIcon from '@mui/icons-material/Call';
+import CloseIcon from '@mui/icons-material/Close';
+import Divider from '@mui/material/Divider';
+import { useNavigate, NavLink } from 'react-router-dom';
+import imageSidebarMobile from "..//images/people-group.png"
+
+
 const useStyles = makeStyles({
     box:{
         background:"linear-gradient(to bottom, #ffffff 0%, #bde6f1 100%)",
         width:"80%",
     },imageSidebarMobile:{
-      width:"100%"
+      width:"100%",
+      display:"flex"
     }
 })
 
@@ -37,6 +52,24 @@ const Buttons = styled(Box)(({theme})=> ({
 
 export default function Navbar(){
     const classes = useStyles();
+    const [isOpen,setIsOpen] = useState(false)
+
+    const [buttonVisible,setButtonVisible] = useState(false)
+
+    const toggleVisibility = () =>{
+        if(window.pageYOffset > 300){
+            setButtonVisible(true)
+        }
+        else{
+            setButtonVisible(false)
+        }
+    }
+    useEffect(()=>{
+        window.addEventListener('scroll',toggleVisibility)
+        return()=>{
+            window.removeEventListener('scroll',toggleVisibility)
+        }
+    },[])
     return(
         <div>
             <AppBar position="fixed" elevation={0} sx={{backgroundColor:"white", boxShadow:"0 2px 10px rgb(0 0 0 / 0.125)",width:"100%"}}>
@@ -46,10 +79,10 @@ export default function Navbar(){
                 <Typography variant="h6" sx={{display:{xs:"none",sm:"block",md:"block",lg:"block",xl:"block"},color:"#30475E",fontWeight:"700",cursor:"pointer",fontSize:"28px"}}>
                     FFAANN
                 </Typography>
-                <Typography variant="h6" sx={{display:{xs:"block",sm:"none",md:"none",lg:"none",xl:"none"},color:"#30475E",fontWeight:"700",cursor:"pointer",fontSize:"28px"}}>
-                    <MenuIcon sx={{fontSize:"30px",marginTop:"10px"}}/>
-                </Typography>
                 </Link>
+                <Typography variant="h6" sx={{display:{xs:"block",sm:"none",md:"none",lg:"none",xl:"none"},color:"#30475E",fontWeight:"700",cursor:"pointer",fontSize:"28px"}}>
+                    <MenuIcon sx={{fontSize:"30px",marginTop:"10px"}} onClick={()=>{setIsOpen(true)}}/>
+                </Typography>
                 </Box>
                 <Buttons sx={{display:{xs:"none",sm:"block"}}}>
                     <Link to="skills" smooth duration={1000} offset={-100}>
@@ -72,6 +105,57 @@ export default function Navbar(){
                 </Buttons>
             </StyledToolbar>
             </AppBar>
+            <Drawer variant='temporary' open={isOpen} classes={{paper: classes.box}} onBackdropClick={()=>{setIsOpen(false)}}>
+        <Typography variant="h6" sx={{fontSize:"30px",marginLeft:"20px",marginTop:"20px",color:"#03045E"}}>FFAANN</Typography>
+        <List>
+          <Link to="home" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-100}>
+          <ListItem disablePadding sx={{margin:"10px 0 10px 0"}}>
+            <ListItemButton sx={{"&:hover #iconButtonSidebar":{color:"#03045E"}}}>
+              <ListItemIcon>
+                <HomeIcon id="iconButtonSidebar"/>
+              </ListItemIcon>
+              <Typography variant="h6" sx={{fontSize:"20px"}}>HOME</Typography>
+            </ListItemButton>
+          </ListItem>
+          </Link>
+          <Link to="skills" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-100}>
+          <ListItem disablePadding sx={{margin:"10px 0 10px 0"}} >
+            <ListItemButton sx={{"&:hover #iconButtonSidebar":{color:"#03045E"}}}>
+              <ListItemIcon>
+                <ArticleIcon id="iconButtonSidebar"/>
+              </ListItemIcon>
+              <Typography variant="h6" sx={{fontSize:"20px"}}>SKILLS</Typography>
+            </ListItemButton>
+          </ListItem>
+          </Link>
+          <Link to="projects" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-100}>
+          <ListItem disablePadding sx={{margin:"10px 0 10px 0"}}>
+            <ListItemButton sx={{"&:hover #iconButtonSidebar":{color:"#03045E"}}}>
+              <ListItemIcon>
+                <AccountCircleIcon id="iconButtonSidebar"/>
+              </ListItemIcon>
+              <Typography variant="h6" sx={{fontSize:"20px"}}>PROJECTS</Typography>
+            </ListItemButton>
+          </ListItem>
+          </Link>
+          <Link to="contact" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-100}>
+          <ListItem disablePadding sx={{margin:"10px 0 10px 0"}}>
+            <ListItemButton sx={{"&:hover #iconButtonSidebar":{color:"#03045E"}}}>
+              <ListItemIcon>
+                <CallIcon id="iconButtonSidebar"/>
+              </ListItemIcon>
+              <Typography variant="h6" sx={{fontSize:"20px"}}>CONTACT</Typography>
+            </ListItemButton>
+          </ListItem>
+          </Link>
+        </List>
+        <Box sx={{position:"absolute",right:"10px",top:"10px"}} onClick={()=>{setIsOpen(false)}}>
+            <CloseIcon sx={{fontSize:"30px",color:"red",cursor:'pointer'}}/>
+        </Box>
+        <Box sx={{width:"100%",position:"absolute",bottom:"0"}}>
+        <img  src={imageSidebarMobile} className={classes.imageSidebarMobile} />
+                </Box>
+        </Drawer>
         </div>
     )
 }
