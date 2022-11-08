@@ -5,9 +5,9 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import emoji03 from "..//images/emoji03.png"
 import ArticleIcon from '@mui/icons-material/Article';
 import PhoneIcon from '@mui/icons-material/Phone';
-import award01 from "..//images/Experience/fibo.jpeg"
-import award02 from "..//images/Experience/jstp.png"
-import award03 from "..//images/Experience/nsc.png"
+import award01 from "..//images/Optimized/fibo.jpeg"
+import award02 from "..//images/Optimized/jstp-min.png"
+import award03 from "..//images/Optimized/nsc-min.png"
 
 import Aos from "aos";
 import "aos/dist/aos.css"
@@ -67,6 +67,8 @@ const GridImage = styled(Grid)(({ theme }) => ({
 }));
 
 export default function Project() {
+
+
     useEffect(()=>{
         Aos.init({ duration:1500});
     },[]);
@@ -145,7 +147,7 @@ export default function Project() {
                         <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex" }}>
                         I developed Educational Game, Online Multiplayer Game and Website for Detecting Electrical Appliances in household.                        </Typography>
                     </Grid>
-                    <Grid lg={12} sx={{marginTop:"20px",textAlign:"left"}}>
+                    <Grid lg={12} sx={{marginTop:"10px",textAlign:"left"}}>
                         <ReadmoreButton sx={{marginLeft:"10px"}}>Read more</ReadmoreButton>
                     </Grid>
                 </Grid>

@@ -89,6 +89,24 @@ const GridImage = styled(Grid)(({ theme }) => ({
 }));
 
 export default function Contact() {
+    function OpenFacebook(){
+        window.open("https://www.facebook.com/rudfanmaimahad/");
+    }
+    function OpenInstagram(){
+        window.open("https://www.instagram.com/ffaann.mmh/?hl=en");
+    }
+    function OpenLinkedIn(){
+        window.open("");
+    }
+    function OpenMedium(){
+        window.open("https://medium.com/@ffaann");
+    }
+    function OpenGithub(){
+        window.open("https://github.com/ffaann02");
+    }
+    function OpenResume(){
+        window.open("");
+    }
     const classes = useStyles();
     useEffect(()=>{
         Aos.init({ duration:1500});
@@ -118,10 +136,10 @@ export default function Contact() {
                         </Typography>
             
                         <Box sx={{width:"100%",marginTop:"10px"}}>
-                            <a><FontAwesomeIcon icon={faFacebook} className={classes.socialIcon}/></a>
-                            <a><FontAwesomeIcon icon={faInstagram} className={classes.socialIcon}/></a>
-                            <a><FontAwesomeIcon icon={faLinkedin} className={classes.socialIcon}/></a>
-                            <a><FontAwesomeIcon icon={faMediumM} className={classes.socialIcon}/></a>
+                            <a><FontAwesomeIcon icon={faFacebook} className={classes.socialIcon} onClick={OpenFacebook}/></a>
+                            <a><FontAwesomeIcon icon={faInstagram} className={classes.socialIcon} onClick={OpenInstagram}/></a>
+                            <a><FontAwesomeIcon icon={faLinkedin} className={classes.socialIcon} onClick={OpenLinkedIn}/></a>
+                            <a><FontAwesomeIcon icon={faMediumM} className={classes.socialIcon} onClick={OpenMedium}/></a>
                         </Box>
                         <Typography sx={{ fontSize:{xl:"1.5vw",lg:"1.5vw",md:"24px",sm:"30px",xs:"24px"}, marginTop: "10px", display: "flex" }}>
                             <Typography sx={{ fontSize: {xl:"1.75vw",lg:"1.75vw",md:"24px",sm:"24px",xs:"20px"}, marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>

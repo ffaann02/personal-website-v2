@@ -2,10 +2,11 @@ import React, { useState ,useEffect} from 'react';
 import { AppBar, Button, Drawer, styled, Toolbar, Typography,Box, Grid} from "@mui/material";
 import { makeStyles } from '@mui/styles'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import emoji03 from "..//images/emoji05.png"
+import emoji03 from "..//images/Optimized/emoji05.png"
 import ArticleIcon from '@mui/icons-material/Article';
 import PhoneIcon from '@mui/icons-material/Phone';
 import emoji01 from "..//images/emoji01.png"
+
 import "./heroblockStyle.css"
 import {Link} from "react-scroll"
 const useStyles = makeStyles({
@@ -65,6 +66,12 @@ const HeroblockButton = styled(Button)(({theme})=>({
 }));
 
 export default function HeroBlock(){
+    function OpenGithub(){
+        window.open("https://github.com/ffaann02");
+    }
+    function OpenResume(){
+        window.open("");
+    }
     const classes = useStyles();
     document.addEventListener("mousemove", parallax);
     function parallax(e){
@@ -108,17 +115,19 @@ export default function HeroBlock(){
                     <Box sx={{width:"100%"}}>
                     <HeroblockButton sx={{marginTop:"10px"}}>
                         <GitHubIcon sx={{marginRight:"5px", color :"#277BC0"}}/>
-                            <Typography sx={{fontSize:"16px",marginTop:"2px",fontWeight:"600",color:"#023E8A"}}>Github</Typography>
+                            <Typography sx={{fontSize:"16px",marginTop:"2px",fontWeight:"600",color:"#023E8A"}} onClick={OpenGithub}>Github</Typography>
                     </HeroblockButton>
                     <HeroblockButton sx={{marginLeft:"10px",marginTop:"10px"}}>
                         <ArticleIcon sx={{marginRight:"5px", color :"#277BC0"}}/>
-                            <Typography sx={{fontSize:"16px",marginTop:"2px",fontWeight:"600",color:"#023E8A"}}>RESUME</Typography>
+                            <Typography sx={{fontSize:"16px",marginTop:"2px",fontWeight:"600",color:"#023E8A" }} onClick={OpenResume}>RESUME</Typography>
                     </HeroblockButton>
                     </Box>
+                    <Link to="contact" smooth duration={1000} offset={-90}>
                     <HeroblockButton sx={{marginLeft:"10px",marginTop:"10px",marginLeft:"0"}}>
                         <PhoneIcon sx={{marginRight:"5px", color :"#277BC0"}}/>
                             <Typography sx={{fontSize:"16px",marginTop:"2px",fontWeight:"600",color:"#023E8A"}}>CONTACT ME</Typography>
                     </HeroblockButton>
+                    </Link>
                     </Box>
                 </Grid>
                 <Grid item lg={6} md={6} sm={12} xs={12} sx={{textAlign:"center",width:"100%",height:"100%"

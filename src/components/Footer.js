@@ -44,6 +44,18 @@ const Buttons = styled(Box)(({theme})=> ({
 }));
 
 export default function Footer(){
+    function OpenFacebook(){
+        window.open("https://www.facebook.com/rudfanmaimahad/");
+    }
+    function OpenInstagram(){
+        window.open("https://www.instagram.com/ffaann.mmh/?hl=en");
+    }
+    function OpenLinkedIn(){
+        window.open("");
+    }
+    function OpenMedium(){
+        window.open("https://medium.com/@ffaann");
+    }
     const classes = useStyles();
     return(
         <Box sx={{width:"100%",marginTop:"20px"}}>
@@ -54,10 +66,10 @@ export default function Footer(){
                             <Typography sx={{fontSize:{xl:"1vw",lg:"1vw",md:"20px",sm:"20px",xs:"16px"}}}>© 2022, Rudfaan Maimahad.</Typography>
                             <Typography sx={{fontSize:{xl:"1vw",lg:"1vw",md:"20px",sm:"20px",xs:"16px"}}}>Built with React & Material UI v5</Typography>
                             <Box sx={{width:"100%",marginTop:"5px",textAlign:"center",marginLeft:"10px"}}>
-                            <FontAwesomeIcon icon={faFacebook} className={classes.socialIconFooter}/>
-                         <FontAwesomeIcon icon={faInstagram} className={classes.socialIconFooter}/>
-                          <FontAwesomeIcon icon={faLinkedin} className={classes.socialIconFooter} />
-                          <FontAwesomeIcon icon={faMediumM} className={classes.socialIconFooter} />
+                            <FontAwesomeIcon icon={faFacebook} className={classes.socialIconFooter} onClick={OpenFacebook}/>
+                         <FontAwesomeIcon icon={faInstagram} className={classes.socialIconFooter} onClick={OpenInstagram}/>
+                          <FontAwesomeIcon icon={faLinkedin} className={classes.socialIconFooter} onClick={OpenLinkedIn} />
+                          <FontAwesomeIcon icon={faMediumM} className={classes.socialIconFooter} onClick={OpenMedium}/>
                         </Box>
                         </Grid>
                 </Grid>
