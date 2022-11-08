@@ -26,10 +26,16 @@ const useStyles = makeStyles({
         marginRight: "auto"
     },
     underLine: {
-        width: "8vw",
-        border: "2px solid #5DA7DB",
-        borderRadius: "10px",
-        marginBottom: "10px"
+        width:"200px",
+        border:"2px solid #5DA7DB",
+        borderRadius:"10px",
+        marginBottom:"10px",
+        ['@media (max-width:900px)']:{
+            width:"150px",
+        },
+        ['@media (max-width:600px)']:{
+            width:"120px",
+        }
     },
     experienceThumbnail: {
         width: "100%",
@@ -50,6 +56,9 @@ const ReadmoreButton = styled(Button)(({theme})=>({
         padding:"10px 30px" ,
         backgroundColor:"#B8E8FC"
     },
+    ['@media (max-width:600px)']:{
+        fontSize:"16px"
+    }
 }));
 
 
@@ -63,81 +72,81 @@ export default function Project() {
     },[]);
     const classes = useStyles();
     return (
-        <Box className={classes.container} sx={{ width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" }, marginTop: "20px" }} id="projects" data-aos="fade-up">
+        <Box className={classes.container} sx={{ width: { xl:"60%",lg: "70%", md: "90%", sm: "90%", xs: "90%" }, marginTop: "20px" }} id="projects" data-aos="fade-up">
             <Box sx={{ width: "100%" }}>
-                <Typography sx={{ fontSize: "2.5vw", marginTop: "40px", fontWeight: "600", color: "#205375", textAlign: "center" }}>Projects & Experience</Typography>
+                <Typography sx={{ fontSize:{xl:"2.5vw",lg:"36x",md:"36px",sm:"30px",xs:"24px"}, marginTop: "10px", fontWeight: "600", color: "#205375", textAlign: "center" }}>Projects & Experience</Typography>
                 <hr className={classes.underLine} />
                 <Grid container sx={{ width: "100%", marginTop: "20px" }}>
-                    <GridImage item lg={5} sx={{ padding: "10px" }}>
+                    <GridImage item lg={5} md={5} sm={12} xs={12} sx={{ padding: "10px" }}>
                         <img src={award01} className={classes.experienceThumbnail} />
                     </GridImage>
-                    <Grid item lg={7} sx={{ padding: "10px" }}>
-                        <Typography sx={{ fontSize: "1.75vw", fontWeight: "600", color: "#205375" }}>1st Prize Winner in Metaverse for Smart Factory Contest 2022 by Microsoft</Typography>
-                        <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
+                    <Grid item lg={7} md={7} sm={12} xs={12}sx={{ padding: "10px" }}>
+                        <Typography sx={{ fontSize: {xl:"1.75vw",lg:"1.75vw",md:"24px",sm:"24px",xs:"20px"}, fontWeight: "600", color: "#205375" }}>1st Prize Winner in Metaverse for Smart Factory Contest 2022 by Microsoft</Typography>
+                        <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex" }}>
+                            <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
                                 Project:
                             </Typography>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", marginLeft: "10px" }}>
+                            <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex", marginLeft: "10px" }}>
                                 Natural Latex Pillow Factory based on Digital Twins in Metaverse
                             </Typography>
                         </Typography>
-                        <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
+                        <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"20px"}, marginTop: "5px", display: "flex" }}>
+                            <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
                                 Role:
                             </Typography>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", marginLeft: "10px" }}>
+                            <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex", marginLeft: "10px" }}>
                                 3D and VR Developer
                             </Typography>
                         </Typography>
 
                     </Grid>
-                    <GridImage item lg={5} sx={{ padding: "10px" }}>
+                    <GridImage item lg={5} md={5} sx={{ padding: "10px" }}>
                         <img src={award02} className={classes.experienceThumbnail} />
                     </GridImage>
-                    <Grid item lg={7} sx={{ padding: "10px" }}>
-                        <Typography sx={{ fontSize: "1.75vw", fontWeight: "600", color: "#205375" }}>Junior Science Talent Project 24th (JSTP24) by NSTDA</Typography>
-                        <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
+                    <Grid item lg={7} md={7} sx={{ padding: "10px" }}>
+                        <Typography sx={{ fontSize: {xl:"1.75vw",lg:"1.75vw",md:"24px",sm:"24px",xs:"20px"}, fontWeight: "600", color: "#205375" }}>Junior Science Talent Project 24th (JSTP24) by NSTDA</Typography>
+                        <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex" }}>
+                            <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
                                 Project:
                             </Typography>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", marginLeft: "10px" }}>
+                            <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex", marginLeft: "10px" }}>
                                 Pill Detection using Convolution Neural Networks
                             </Typography>
                         </Typography>
-                        <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
+                        <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex" }}>
+                            <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
                                 Description:
                             </Typography>
                         </Typography>
-                        <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
+                        <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex" }}>
                             A Science project in computer field. It was developed for detecting pills, which use for help people with visual disability
                         </Typography>
                     </Grid>
-                    <GridImage item lg={5} sx={{ padding: "10px" }}>
+                    <GridImage item lg={5} md={5} sx={{ padding: "10px" }}>
                         <img src={award03} className={classes.experienceThumbnail} />
                     </GridImage>
-                    <Grid item lg={7} sx={{ padding: "10px" }}>
-                        <Typography sx={{ fontSize: "1.75vw", fontWeight: "600", color: "#205375" }}>
+                    <Grid item lg={7} md={7} sx={{ padding: "10px" }}>
+                        <Typography sx={{ fontSize:{xl:"1.75vw",lg:"1.75vw",md:"24px",sm:"24px",xs:"20px"}, fontWeight: "600", color: "#205375" }}>
                             3 Years Finalist in National Software Contest (NSC) by NECTEC
                         </Typography>
-                        <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
+                        <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex" }}>
+                            <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
                                 Role: 
                             </Typography>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", marginLeft: "10px" }}>
+                            <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex", marginLeft: "10px" }}>
                                 Developer, Game Designer , Leader, Hardware
                             </Typography>
                         </Typography>
-                        <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
+                        <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex" }}>
+                            <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
                                 Description:
                             </Typography>
                         </Typography>
-                        <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
+                        <Typography sx={{ fontSize: {xl:"1.5vw",lg:"1.6vw",md:"20px",sm:"20px",xs:"16px"}, marginTop: "5px", display: "flex" }}>
                         I developed Educational Game, Online Multiplayer Game and Website for Detecting Electrical Appliances in household.                        </Typography>
                     </Grid>
-                    <Grid lg={12} sx={{marginTop:"20px",textAlign:"center"}}>
-                        <ReadmoreButton>Read more</ReadmoreButton>
+                    <Grid lg={12} sx={{marginTop:"20px",textAlign:"left"}}>
+                        <ReadmoreButton sx={{marginLeft:"10px"}}>Read more</ReadmoreButton>
                     </Grid>
                 </Grid>
             </Box>

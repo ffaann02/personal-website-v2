@@ -2,7 +2,7 @@ import React, { useState ,useEffect} from 'react';
 import { AppBar, Button, Drawer, styled, Toolbar, Typography,Box, Grid} from "@mui/material";
 import { makeStyles } from '@mui/styles'
 import GitHubIcon from '@mui/icons-material/GitHub';
-import emoji03 from "..//images/emoji03.png"
+import emoji03 from "..//images/emoji05.png"
 import ArticleIcon from '@mui/icons-material/Article';
 import PhoneIcon from '@mui/icons-material/Phone';
 import emoji01 from "..//images/emoji01.png"
@@ -30,7 +30,7 @@ const useStyles = makeStyles({
         ['@media (max-width:900px)']:{
             width:"350px",
             marginTop:"100px",
-            marginRight:"0",
+            marginRight:"10px",
         }
         
     },
@@ -39,12 +39,17 @@ const useStyles = makeStyles({
         opacity:"50%"
     },
     heroblockImage02:{
-        width:"350px",
-        height:"51%",
+        width:"370px",
+        height:"50%",
         marginLeft:"auto",
         marginRight:"auto",
+        marginTop:"40px",
         display:"flex",
-        justifySelf:"center"
+        justifySelf:"center",
+        ['@media (max-width:400px)']:{
+            width:"290px",
+            height:"43%",
+        }
     }
     
     

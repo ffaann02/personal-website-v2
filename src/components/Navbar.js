@@ -52,12 +52,12 @@ export default function Navbar(){
                 </Link>
                 </Box>
                 <Buttons sx={{display:{xs:"none",sm:"block"}}}>
-                    <Link to="skills" smooth duration={1000} offset={50}>
+                    <Link to="skills" smooth duration={1000} offset={-100}>
                         <NavbarButton variant="text">
                             <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Skills</Typography>
                         </NavbarButton>
                     </Link>
-                    <Link to="projects" smooth duration={1000} offset={-100}>
+                    <Link to="projects" smooth duration={1000} offset={-135}>
                     <NavbarButton variant="text">
                             <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Projects</Typography>
                         </NavbarButton>
