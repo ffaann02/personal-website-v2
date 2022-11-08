@@ -48,16 +48,16 @@ export default function Footer(){
     return(
         <Box sx={{width:"100%",marginTop:"20px"}}>
             <Grid container className={classes.container} sx={{
-                        width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" }, textAlign: "center",
+                        width: { xl:"60%",lg: "70%", md: "90%", sm: "90%", xs: "90%" }, textAlign: "center",
                     }}>
-                        <Grid item lg={12} sx={{padding:"0 0 10px 0"}}>
-                            <Typography sx={{fontSize:"1vw"}}>© 2022, Rudfaan Maimahad.</Typography>
-                            <Typography sx={{fontSize:"1vw"}}>Built with React & Material UI v5</Typography>
-                            <Box sx={{width:"100%",marginTop:"5px"}}>
-                            <a><FontAwesomeIcon icon={faFacebook} className={classes.socialIconFooter}/></a>
-                            <a><FontAwesomeIcon icon={faInstagram} className={classes.socialIconFooter}/></a>
-                            <a><FontAwesomeIcon icon={faLinkedin} className={classes.socialIconFooter}/></a>
-                            <a><FontAwesomeIcon icon={faMediumM} className={classes.socialIconFooter}/></a>
+                        <Grid item lg={12} md={12} sm={12} xs={12}sx={{padding:"0 0 10px 0"}}>
+                            <Typography sx={{fontSize:{xl:"1vw",lg:"1vw",md:"20px",sm:"20px",xs:"16px"}}}>© 2022, Rudfaan Maimahad.</Typography>
+                            <Typography sx={{fontSize:{xl:"1vw",lg:"1vw",md:"20px",sm:"20px",xs:"16px"}}}>Built with React & Material UI v5</Typography>
+                            <Box sx={{width:"100%",marginTop:"5px",textAlign:"center",marginLeft:"10px"}}>
+                            <FontAwesomeIcon icon={faFacebook} className={classes.socialIconFooter}/>
+                         <FontAwesomeIcon icon={faInstagram} className={classes.socialIconFooter}/>
+                          <FontAwesomeIcon icon={faLinkedin} className={classes.socialIconFooter} />
+                          <FontAwesomeIcon icon={faMediumM} className={classes.socialIconFooter} />
                         </Box>
                         </Grid>
                 </Grid>

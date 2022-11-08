@@ -26,13 +26,30 @@ const useStyles = makeStyles({
         marginRight: "auto"
     },
     underLine: {
-        width: "8vw",
-        border: "2px solid #5DA7DB",
-        borderRadius: "10px",
-        marginBottom: "10px"
+        width:"125px",
+        border:"2px solid #5DA7DB",
+        borderRadius:"10px",
+        marginBottom:"10px",
+        ['@media (max-width:900px)']:{
+            width:"120px",
+        },
+        ['@media (max-width:600px)']:{
+            width:"100px",
+        }
     },
     contactThumbnail: {
         width: "100%",
+        display:"flex",
+        ['@media (max-width:1200px)']:{
+            width:"300px",
+            marginLeft:"auto",
+            marginRight:"auto",
+            display:"flex"
+        },
+        ['@media (max-width:400px)']:{
+            width:"200px",
+        },
+        
     },
     socialIcon: {
         fontSize: "40px",
@@ -41,6 +58,9 @@ const useStyles = makeStyles({
         cursor: "pointer",
         "&:hover": {
             color: "#205375"
+        },
+        ['@media (max-width:600px)']:{
+            fontSize:"30px",
         },
     },
     profileThumbnail: {
@@ -74,24 +94,24 @@ export default function Contact() {
         Aos.init({ duration:1500});
     },[]);
     return (
-        <Box className={classes.container} sx={{ width: { lg: "60%", md: "90%", sm: "90%", xs: "90%" }, marginTop: "20px" }} id="contact" data-aos="fade-up">
+        <Box className={classes.container} sx={{ width: { xl:"60%",lg: "70%", md: "90%", sm: "90%", xs: "90%" }, marginTop: "20px" }} id="contact" data-aos="fade-up">
             <Box sx={{ width: "100%" }}>
-                <Typography sx={{ fontSize: "2.5vw", marginTop: "40px", fontWeight: "600", color: "#205375", textAlign: "center" }}>Get In Touch</Typography>
+                <Typography sx={{ fontSize:{xl:"2.5vw",lg:"36x",md:"36px",sm:"36px",xs:"30px"}, marginTop: "40px", fontWeight: "600", color: "#205375", textAlign: "center" }}>Get In Touch</Typography>
                 <hr className={classes.underLine} />
                 <Grid container sx={{ width: "100%", marginTop: "20px" ,borderRadius:"20px"
                 ,boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",padding:"20px 20px 0 20px",border:"1px solid rgba(99, 99, 99, 0.2)"}}>
-                    <Grid item lg={7} sx={{padding:"10px",position:"relative"}}>
-                        <Typography sx={{ fontSize: "1.75vw", fontWeight: "600", color: "#205375" }}></Typography>
-                        <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
+                    <Grid item lg={7} md={7} sm={12} xs={12} sx={{padding:"10px",position:"relative"}}>
+                        <Typography sx={{ fontSize: {xl:"1.75vw",lg:"1.75vw",md:"24px",sm:"24px",xs:"5vw"}, fontWeight: "600", color: "#205375" }}></Typography>
+                        <Typography sx={{ fontSize:{xl:"1.5vw",lg:"1.5vw",md:"24px",sm:"24x",xs:"5vw"}, marginTop: "5px", display: "flex" }}>
+                            <Typography sx={{ fontSize:{xl:"1.5vw",lg:"1.5vw",md:"24px",sm:"24px",xs:"4vw"}, marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
                                 Email:
                             </Typography>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", marginLeft: "10px" }}>
+                            <Typography sx={{ fontSize:{xl:"1.5vw",lg:"1.5vw",md:"24px",sm:"24px",xs:"4vw"}, marginTop: "5px", display: "flex", marginLeft: "10px" }}>
                                 rudfaanmaimahad@gmail.com
                             </Typography>
                         </Typography>
                         <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex" }}>
-                            <Typography sx={{ fontSize: "1.5vw", marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
+                            <Typography sx={{ fontSize:{xl:"1.5vw",lg:"1.5vw",md:"24px",sm:"24px",xs:"4vw"}, marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
                                 Social Media:
                             </Typography>
                             
@@ -103,16 +123,14 @@ export default function Contact() {
                             <a><FontAwesomeIcon icon={faLinkedin} className={classes.socialIcon}/></a>
                             <a><FontAwesomeIcon icon={faMediumM} className={classes.socialIcon}/></a>
                         </Box>
-                        <Typography sx={{ fontSize: "1.5vw", marginTop: "10px", display: "flex" }}>
-                            <Typography sx={{ fontSize: "1.75vw", marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
+                        <Typography sx={{ fontSize:{xl:"1.5vw",lg:"1.5vw",md:"24px",sm:"30px",xs:"24px"}, marginTop: "10px", display: "flex" }}>
+                            <Typography sx={{ fontSize: {xl:"1.75vw",lg:"1.75vw",md:"24px",sm:"24px",xs:"20px"}, marginTop: "5px", display: "flex", color: "#205375", fontWeight: "600" }}>
                                 Thank you for Visiting My Website 
                             </Typography>
                         </Typography>
-                            <Box>
-                            <img src={profileImage} className={classes.profileThumbnail} />
-                            </Box>
+                            
                     </Grid>
-                    <GridImage item lg={5}>
+                    <GridImage item lg={5} md={5} sm={12} xs={12}>
                         <img src={emoji04} className={classes.contactThumbnail} />
                     </GridImage>
                 </Grid>
