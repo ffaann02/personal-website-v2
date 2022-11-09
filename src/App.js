@@ -7,15 +7,28 @@ import "./index.css"
 import Project from './components/Project';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+
+import { BrowserRouter as Router, HashRouter, Route, Routes } from "react-router-dom";
+
 function App() {
   return (
     <Box>
-      <Navbar/>
-      <HeroBlock/>
-      <Skill/>
-      <Project/>
-      <Contact/>
-      <Footer/>
+      <HashRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/"
+            element={
+              <div>
+                <HeroBlock />
+                <Skill />
+                <Project />
+                <Contact />
+              </div>
+            }>
+          </Route>
+        </Routes>
+        <Footer />
+      </HashRouter>
     </Box>
   );
 }

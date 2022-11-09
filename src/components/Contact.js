@@ -101,12 +101,6 @@ export default function Contact() {
     function OpenMedium(){
         window.open("https://medium.com/@ffaann");
     }
-    function OpenGithub(){
-        window.open("https://github.com/ffaann02");
-    }
-    function OpenResume(){
-        window.open("");
-    }
     const classes = useStyles();
     useEffect(()=>{
         Aos.init({ duration:1500});
