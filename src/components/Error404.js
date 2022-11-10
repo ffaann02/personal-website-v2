@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import emoji03 from "..//images/emoji03.png"
 import ArticleIcon from '@mui/icons-material/Article';
 import PhoneIcon from '@mui/icons-material/Phone';
-import emoji06 from "..//images/emoji06.png"
+import emoji06 from "..//images/Optimized/emoji06.png"
 import profileImage from "..//images/faan-image.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faInstagram, faLinkedin, faMediumM } from '@fortawesome/free-brands-svg-icons'
@@ -126,7 +126,7 @@ export default function Error404() {
                 }}>Page Not Found</Typography>
                     <Typography sx={{ fontSize: { xl: "1vw", lg: "18px", md: "16px" }, fontWeight: "400", color: "#205375"
                     , lineHeight: "1.75", marginTop: "10px" }}>
-                        Uh no, we can't find the page you're looking for. Try going see home page. If you think this is issue, please contact us.
+                        Uh no, we can't find the page you're looking for. Try going to see home page. If you think this is issue, please contact us.
                     </Typography>
                     <BackHomeButton sx={{marginTop:"10px"}} onClick={()=>{
                     history("/")

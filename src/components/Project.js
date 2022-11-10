@@ -8,8 +8,8 @@ import emoji03 from "..//images/emoji03.png"
 import ArticleIcon from '@mui/icons-material/Article';
 import PhoneIcon from '@mui/icons-material/Phone';
 import award01 from "..//images/Optimized/fibo.jpeg"
-import award02 from "..//images/Optimized/jstp-min.png"
-import award03 from "..//images/Optimized/nsc-min.png"
+import award02 from "..//images/Optimized/jstp-min.jpeg"
+import award03 from "..//images/Optimized/nsc-min.jpeg"
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Aos from "aos";
 import "aos/dist/aos.css"
