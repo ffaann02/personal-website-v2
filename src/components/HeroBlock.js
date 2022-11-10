@@ -70,7 +70,7 @@ export default function HeroBlock(){
         window.open("https://github.com/ffaann02");
     }
     function OpenResume(){
-        window.open("");
+        window.open("https://drive.google.com/drive/folders/18xfcJvIk5UJIPGbyvOlHfSINXgJ6e9A-?usp=sharing");
     }
     const classes = useStyles();
     document.addEventListener("mousemove", parallax);
@@ -119,7 +119,7 @@ export default function HeroBlock(){
                     </HeroblockButton>
                     <HeroblockButton sx={{marginLeft:"10px",marginTop:"10px"}}>
                         <ArticleIcon sx={{marginRight:"5px", color :"#277BC0"}}/>
-                            <Typography sx={{fontSize:"16px",marginTop:"2px",fontWeight:"600",color:"#023E8A" }} onClick={OpenResume}>RESUME</Typography>
+                            <Typography sx={{fontSize:"16px",marginTop:"2px",fontWeight:"600",color:"#023E8A" }} onClick={OpenResume}>Portfolio</Typography>
                     </HeroblockButton>
                     </Box>
                     <Link to="contact" smooth duration={1000} offset={-90}>
