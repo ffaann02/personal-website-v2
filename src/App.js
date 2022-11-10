@@ -10,27 +10,33 @@ import Footer from './components/Footer';
 
 import { BrowserRouter as Router, HashRouter, Route, Routes } from "react-router-dom";
 import Blog from './components/Blog';
+import Error404 from './components/Error404';
 
 function App() {
   return (
     <Box>
-      <HashRouter>
-        <Navbar />
+      <Router>
         <Routes>
           <Route path="/"
             element={
               <div>
+                <Navbar />
                 <HeroBlock />
                 <Skill />
                 <Project />
                 <Blog/>
                 <Contact />
               </div>
-            }>
-          </Route>
+            }/>
+          <Route path="*"
+            element={
+            <div>
+              <Error404/>
+            </div>}
+          />
         </Routes>
         <Footer />
-      </HashRouter>
+      </Router>
     </Box>
   );
 }

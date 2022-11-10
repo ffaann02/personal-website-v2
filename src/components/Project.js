@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { AppBar, Button, Drawer, styled, Toolbar, Typography, Box, Grid } from "@mui/material";
 import { makeStyles } from '@mui/styles'
+import { useNavigate, NavLink } from 'react-router-dom';
+
 import GitHubIcon from '@mui/icons-material/GitHub';
 import emoji03 from "..//images/emoji03.png"
 import ArticleIcon from '@mui/icons-material/Article';
@@ -90,8 +92,7 @@ const GridImage = styled(Grid)(({ theme }) => ({
 }));
 
 export default function Project() {
-
-
+    const history = useNavigate();
     useEffect(() => {
         Aos.init({ duration: 1500 });
     }, []);
@@ -316,7 +317,9 @@ export default function Project() {
                         </Grid>
                     </Grid>
                     <Grid lg={12} sx={{ marginTop: "30px", textAlign: "center", width: "100%" }}>
-                        <ReadmoreButton sx={{}}>Read more</ReadmoreButton>
+                        <ReadmoreButton sx={{}} onClick={()=>{
+                    history("/projects")
+                }}>Read more</ReadmoreButton>
                     </Grid>
                 </Grid>
             </Box>

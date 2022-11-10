@@ -140,7 +140,7 @@ const Blog = () => {
                     padding: { lg: "0 10px 0 10px", md: "0 10px 0 10px", sm: "10px", xs: "10px" }, marginTop: "10px"
                 }}>
                     <Box sx={{ width: "100%", height: "100%", display: { lg: "block", md: "block", sm: "flex", xs: "block" } ,cursor:"pointer"}}>
-                        <Box sx={{ height: { lg: "40%", md: "40%", sm: "50%", xs: "50%" }, width: { lg: "100%", md: "100%", sm: "40%", xs: "100%" } }}>
+                        <Box sx={{ height: {lg: "40%", md: "40%", sm: "50%", xs: "50%" }, width: { lg: "100%", md: "100%", sm: "40%", xs: "100%" } }}>
                             <img src={mediumBlog[1].thumbnail} className={classes.blogImg} />
                         </Box>
                         <Box sx={{ height: { lg: "60%", md: "60%", sm: "50%", xs: "50%" }, width: { lg: "100%", md: "100%", sm: "60%", xs: "100%" }, marginLeft:{lg:"0",md:"0",sm:"10px",xs:"0"}}}>
