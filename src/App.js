@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 import { BrowserRouter as Router, HashRouter, Route, Routes } from "react-router-dom";
+import Blog from './components/Blog';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <HeroBlock />
                 <Skill />
                 <Project />
+                <Blog/>
                 <Contact />
               </div>
             }>

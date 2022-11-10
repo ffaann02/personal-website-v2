@@ -10,10 +10,12 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemButton from '@mui/material/ListItemButton';
 import HomeIcon from '@mui/icons-material/Home';
 import ArticleIcon from '@mui/icons-material/Article';
+import WhatshotIcon from '@mui/icons-material/Whatshot';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import CallIcon from '@mui/icons-material/Call';
 import CloseIcon from '@mui/icons-material/Close';
 import Divider from '@mui/material/Divider';
+import ComputerIcon from '@mui/icons-material/Computer';
 import { useNavigate, NavLink } from 'react-router-dom';
 import imageSidebarMobile from "..//images/people-group.png"
 
@@ -95,6 +97,11 @@ export default function Navbar(){
                             <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Projects</Typography>
                         </NavbarButton>
                     </Link>
+                    <Link to="blog" smooth duration={1000} offset={-150}>
+                    <NavbarButton variant="text">
+                            <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Blog</Typography>
+                        </NavbarButton>
+                    </Link>
                     <Link to="contact" smooth duration={1000} offset={-90}>
                     <NavbarButton variant="text">
                         <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Contact</Typography>
@@ -106,7 +113,9 @@ export default function Navbar(){
             </StyledToolbar>
             </AppBar>
             <Drawer variant='temporary' open={isOpen} classes={{paper: classes.box}} onBackdropClick={()=>{setIsOpen(false)}}>
-        <Typography variant="h6" sx={{fontSize:"30px",marginLeft:"20px",marginTop:"20px",color:"#03045E"}}>FFAANN</Typography>
+            <Link to="home" smooth duration={1000} offset={-90}>
+            <Typography variant="h6" sx={{fontSize:"30px",marginLeft:"20px",marginTop:"20px",color:"#03045E",cursor:"pointer"}} onClick={()=>{setIsOpen(false)}}>FFAANN</Typography>
+            </Link>
         <List>
           <Link to="home" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-100}>
           <ListItem disablePadding sx={{margin:"10px 0 10px 0"}}>
@@ -118,23 +127,33 @@ export default function Navbar(){
             </ListItemButton>
           </ListItem>
           </Link>
-          <Link to="skills" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-100}>
+          <Link to="skills" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={150}>
           <ListItem disablePadding sx={{margin:"10px 0 10px 0"}} >
             <ListItemButton sx={{"&:hover #iconButtonSidebar":{color:"#03045E"}}}>
               <ListItemIcon>
-                <ArticleIcon id="iconButtonSidebar"/>
+                <WhatshotIcon id="iconButtonSidebar"/>
               </ListItemIcon>
               <Typography variant="h6" sx={{fontSize:"20px"}}>SKILLS</Typography>
             </ListItemButton>
           </ListItem>
           </Link>
-          <Link to="projects" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-100}>
+          <Link to="projects" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-150}>
           <ListItem disablePadding sx={{margin:"10px 0 10px 0"}}>
             <ListItemButton sx={{"&:hover #iconButtonSidebar":{color:"#03045E"}}}>
               <ListItemIcon>
-                <AccountCircleIcon id="iconButtonSidebar"/>
+                <ComputerIcon id="iconButtonSidebar"/>
               </ListItemIcon>
               <Typography variant="h6" sx={{fontSize:"20px"}}>PROJECTS</Typography>
+            </ListItemButton>
+          </ListItem>
+          </Link>
+          <Link to="blog" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-100}>
+          <ListItem disablePadding sx={{margin:"10px 0 10px 0"}}>
+            <ListItemButton sx={{"&:hover #iconButtonSidebar":{color:"#03045E"}}}>
+              <ListItemIcon>
+                <ArticleIcon id="iconButtonSidebar"/>
+              </ListItemIcon>
+              <Typography variant="h6" sx={{fontSize:"20px"}}>BLOG</Typography>
             </ListItemButton>
           </ListItem>
           </Link>
