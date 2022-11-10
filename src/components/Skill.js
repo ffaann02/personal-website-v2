@@ -2,20 +2,20 @@ import { cardClasses, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { makeStyles } from '@mui/styles'
 /// import technical skills icon
-import jsIcon from "..//images/Logo/js.png"
-import pythonIcon from "..//images/Logo/python.png"
-import reactIcon from "..//images/Logo/react.png"
-import nodejsIcon from "..//images/Logo/nodejs.png"
-import unityIcon from "..//images/Logo/unity.png"
-import mysqlIcon from "..//images/Logo/mysql.png"
-import reactnativeIcon from "..//images/Logo/react-native.png"
-import arduinoIcon from "..//images/Logo/arduino.png"
+import jsIcon from "..//images/Optimized/Logo/js.png"
+import pythonIcon from "..//images/Optimized/Logo/python.png"
+import reactIcon from "..//images/Optimized/Logo/react.png"
+import nodejsIcon from "..//images/Optimized/Logo/nodejs.png"
+import unityIcon from "..//images/Optimized/Logo/unity.png"
+import mysqlIcon from "..//images/Optimized/Logo/mysql.png"
+import reactnativeIcon from "..//images/Optimized/Logo/react-native.png"
+import arduinoIcon from "..//images/Optimized/Logo/arduino.png"
 /// import tools icon
-import gitIcon from "..//images/Logo/git.png"
-import githubIcon from "..//images/Logo/github.png"
-import azureIcon from "..//images/Logo/azure.png"
-import postmanIcon from "..//images/Logo/postman.png"
-import muiIcon from "..//images/Logo/mui.png"
+import gitIcon from "..//images/Optimized/Logo/git.png"
+import githubIcon from "..//images/Optimized/Logo/github.png"
+import azureIcon from "..//images/Optimized/Logo/azure.png"
+import postmanIcon from "..//images/Optimized/Logo/postman.png"
+import muiIcon from "..//images/Optimized/Logo/mui.png"
 
 import Aos from "aos";
 import "aos/dist/aos.css"
