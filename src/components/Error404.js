@@ -118,7 +118,7 @@ export default function Error404() {
         <Box className={classes.container} sx={{ width: { xl: "60%", lg: "70%", md: "90%", sm: "90%", xs: "90%" }, marginTop: "40px", height: "100%" }}
             id="error404">
             <Box sx={{ width: "100%", height: "80vh" ,position:"relative"}}>
-                <Box sx={{ top:{xl:"5%",lg:"10%",md:"10%",sm:"20%",xs:"15%"},position:"absolute",width:"100%",textAlign:"center"}}>
+                <Box sx={{ top:{xl:"5%",lg:"10%",md:"10%",sm:"20%",xs:"15%"},width:"100%",textAlign:"center"}}>
                 <img src={emoji06} className={classes.Error404Image}/>
                     <Typography sx={{
                     fontSize: { xl: "2.5vw", lg: "36x", md: "36px", sm: "36px", xs: "30px" },

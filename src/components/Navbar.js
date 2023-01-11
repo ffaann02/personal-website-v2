@@ -78,7 +78,8 @@ export default function Navbar(){
             <StyledToolbar sx={{width:{xl:"60%",lg:"70%",md:"90%",sm:"90%",xs:"90%"}}}>
                 <Box sx={{display:"flex"}}>
                 <Link to="home" smooth duration={1000} offset={-90}>
-                <Typography variant="h6" sx={{display:{xs:"none",sm:"block",md:"block",lg:"block",xl:"block"},color:"#30475E",fontWeight:"700",cursor:"pointer",fontSize:"28px"}}>
+                <Typography variant="h6" sx={{display:{xs:"none",sm:"block",md:"block",lg:"block",xl:"block"},color:"#30475E"
+                ,fontWeight:"700",cursor:"pointer",fontSize:{lg:"28px",md:"28px"}}}>
                     FFAANN
                 </Typography>
                 </Link>
@@ -97,11 +98,11 @@ export default function Navbar(){
                             <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Projects</Typography>
                         </NavbarButton>
                     </Link>
-                    <Link to="blog" smooth duration={1000} offset={-150}>
+                    {/*<Link to="blog" smooth duration={1000} offset={-150}>
                     <NavbarButton variant="text">
                             <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Blog</Typography>
                         </NavbarButton>
-                    </Link>
+    </Link>*/}
                     <Link to="contact" smooth duration={1000} offset={-90}>
                     <NavbarButton variant="text">
                         <Typography sx={{fontSize:"16px", fontWeight:"700", color:"#303960"}}>Contact</Typography>
@@ -148,14 +149,14 @@ export default function Navbar(){
           </ListItem>
           </Link>
           <Link to="blog" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-100}>
-          <ListItem disablePadding sx={{margin:"10px 0 10px 0"}}>
+          {/*<ListItem disablePadding sx={{margin:"10px 0 10px 0"}}>
             <ListItemButton sx={{"&:hover #iconButtonSidebar":{color:"#03045E"}}}>
               <ListItemIcon>
                 <ArticleIcon id="iconButtonSidebar"/>
               </ListItemIcon>
               <Typography variant="h6" sx={{fontSize:"20px"}}>BLOG</Typography>
             </ListItemButton>
-          </ListItem>
+  </ListItem>*/}
           </Link>
           <Link to="contact" onClick={()=>{setIsOpen(false)}} smooth duration={1000} offset={-100}>
           <ListItem disablePadding sx={{margin:"10px 0 10px 0"}}>

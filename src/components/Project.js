@@ -100,7 +100,7 @@ export default function Project() {
     return (
         <Box className={classes.container} sx={{ width: { xl: "60%", lg: "70%", md: "90%", sm: "90%", xs: "90%" }, marginTop: "20px" }} id="projects" data-aos="fade-up">
             <Box sx={{ width: "100%" }}>
-                <Typography sx={{ fontSize: { xl: "2.5vw", lg: "36x", md: "36px", sm: "30px", xs: "24px" }, marginTop: "10px", fontWeight: "600", color: "#205375", textAlign: "center" }}>Projects & Experience</Typography>
+                <Typography sx={{ fontSize: { xl: "2.5vw", lg: "36x", md: "36px", sm: "30px", xs: "24px" }, marginTop: "60px", fontWeight: "600", color: "#205375", textAlign: "center" }}>Projects & Experience</Typography>
                 <hr className={classes.underLine} />
                 <Grid container sx={{ width: "100%", marginTop: "20px", padding: "10px" }}>
                     <Grid item lg={12} md={12} sx={{ marginTop: "20px" }}>

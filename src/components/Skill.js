@@ -74,7 +74,7 @@ export default function Skill() {
         Aos.init({ duration:1500});
     },[]);
     return (
-        <Box sx={{ marginTop: "20px", display: "flex", flexDirection: "column", position: "relative",height:{
+        <Box sx={{ display: "flex", flexDirection: "column", position: "relative",height:{
             xl:"85vh",lg:"80vh",md:"75vh",sm:"100%",xs:"100%"}}} id="skills">
             <Box sx={{ position:{xl:"absolute",lg:"absolute",md:"absolute"}, width: "100%"}}>
                 <Box sx={{ width: "100%", backgroundColor: "#F8F8F8", height:{

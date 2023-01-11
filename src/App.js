@@ -24,7 +24,7 @@ function App() {
                 <HeroBlock />
                 <Skill />
                 <Project />
-                <Blog/>
+                {/*<Blog/>*/}
                 <Contact />
               </div>
             }/>
